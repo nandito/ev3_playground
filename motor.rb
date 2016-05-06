@@ -19,6 +19,23 @@ class Motor
 
     motor_right.command 'run-timed'
     motor_left.command 'run-timed'
+
+    sleep 0.1
+  end
+
+    def move_backward
+    motor_right.stop_command 'brake'
+    motor_right.duty_cycle_sp -30
+    motor_right.time_sp 100
+
+    motor_left.stop_command 'brake'
+    motor_left.duty_cycle_sp -30
+    motor_left.time_sp 100
+
+    motor_right.command 'run-timed'
+    motor_left.command 'run-timed'
+
+    sleep 0.1
   end
 
   def rotate_left
@@ -35,5 +52,17 @@ class Motor
 
     motor_right.command 'run-to-rel-pos'
     motor_left.command 'run-to-rel-pos'
+    
+    sleep 0.1
+  end
+
+  def turn_left
+    motor_right.stop_command 'brake'
+    motor_right.duty_cycle_sp 30
+    motor_right.time_sp 100
+
+    motor_right.command 'run-timed'
+
+    sleep 0.1
   end
 end
