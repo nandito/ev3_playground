@@ -12,19 +12,19 @@ class ColorSensor
     color_num = color_sensor.value0.to_i
       case color_num
       when 1
-        puts 'Black'
+        'Black'
       when 2
-        puts 'Blue'
+        'Blue'
       when 3
-        puts 'Green'
+        'Green'
       when 4
-        puts 'Yellow'
+        'Yellow'
       when 5
-        puts 'Red'
+        'Red'
       when 6
-        puts 'White'
+        'White'
       when 7
-        puts 'Brown'
+        'Brown'
       end
   end
 end
