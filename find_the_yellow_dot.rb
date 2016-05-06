@@ -2,6 +2,14 @@
 
 require 'ev3dev'
 
+def red?
+  col.value0.to_i == 5
+end
+
+def yellow?
+  col.value0.to_i == 4
+end
+
 col   = Ev3dev::Sensor.new 3
 col.mode 'COL-COLOR'
 
@@ -42,10 +50,3 @@ def turn_left(degree)
   sleep 4
 end
 
-def red?
-  col.value0.to_i == 5
-end
-
-def yellow?
-  col.value0.to_i == 4
-end
