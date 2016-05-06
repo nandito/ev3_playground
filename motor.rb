@@ -10,12 +10,12 @@ class Motor
 
   def move_forward
     motor_right.stop_command 'brake'
-    motor_right.duty_cycle_sp 50
-    motor_right.time_sp 500
+    motor_right.duty_cycle_sp 30
+    motor_right.time_sp 100
 
     motor_left.stop_command 'brake'
-    motor_left.duty_cycle_sp 50
-    motor_left.time_sp 500
+    motor_left.duty_cycle_sp 30
+    motor_left.time_sp 100
 
     motor_right.command 'run-timed'
     motor_left.command 'run-timed'
