@@ -26,11 +26,11 @@ class Motor
     motor_left.command 'reset'
 
     motor_right.stop_command 'brake'
-    motor_right.position_sp 360
+    motor_right.position_sp 90
     motor_right.duty_cycle_sp 60
 
     motor_left.stop_command 'brake'
-    motor_left.position_sp -360
+    motor_left.position_sp -90
     motor_left.duty_cycle_sp 60
 
     motor_right.command 'run-to-rel-pos'
