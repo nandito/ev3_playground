@@ -11,6 +11,8 @@ while current_color != 'Red' do
   current_color = color_sensor.get_color
 end
 
+motor.move_backward
+
 while current_color != 'Yellow' do
   motor.turn_left
   current_color = color_sensor.get_color
