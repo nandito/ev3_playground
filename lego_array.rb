@@ -11,8 +11,22 @@ class LegoArray
   end
 
   def next
+    while @color_sensor.current_color != 'White'
+      @motor.move_forward
+    end
+
+    while @color_sensor.current_color != 'Black'
+      @motor.move_forward
+    end
   end
 
   def previous
+    while @color_sensor.current_color != 'White'
+      @motor.move_backward
+    end
+
+    while @color_sensor.current_color != 'Black'
+      @motor.move_backward
+    end
   end
 end
