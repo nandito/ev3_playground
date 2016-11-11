@@ -26,8 +26,8 @@ class Motor
   end
 
   def rotate_left
-    command_motor(motor_right, 'reset')
-    command_motor(motor_right, 'reset')
+    motor_left.command 'reset'
+    motor_right.command 'reset'
     move_motor(motor_right, 90, 60)
     move_motor(motor_left, -90, 60)
     motor_left.command 'run-to-rel-pos'
