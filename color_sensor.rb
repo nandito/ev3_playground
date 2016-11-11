@@ -19,6 +19,6 @@ class ColorSensor
   end
 
   def current_color
-    COLORS.key[color_sensor.value0]
+    COLORS[color_sensor.value0]
   end
 end
