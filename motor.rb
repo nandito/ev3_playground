@@ -10,16 +10,16 @@ class Motor
   end
 
   def move_forward
-    move_motor(motor_right, 30, 100)
-    move_motor(motor_left, 30, 100)
+    move_motor(motor_right, 30, 200)
+    move_motor(motor_left, 30, 200)
     motor_left.command 'run-timed'
     motor_right.command 'run-timed'
     sleep 0.1
   end
 
   def move_backward
-    move_motor(motor_right, -30, 100)
-    move_motor(motor_left, -30, 100)
+    move_motor(motor_right, -30, 200)
+    move_motor(motor_left, -30, 200)
     motor_left.command 'run-timed'
     motor_right.command 'run-timed'
     sleep 0.1
@@ -28,15 +28,15 @@ class Motor
   def rotate_left
     motor_left.command 'reset'
     motor_right.command 'reset'
-    move_motor(motor_right, 90, 60)
-    move_motor(motor_left, -90, 60)
+    move_motor(motor_right, 90, 100)
+    move_motor(motor_left, -90, 100)
     motor_left.command 'run-to-rel-pos'
     motor_right.command 'run-to-rel-pos'
     sleep 0.1
   end
 
   def turn_left
-    move_motor(motor_right, 30, 100)
+    move_motor(motor_right, 30, 200)
     motor_right.command 'run-timed'
 
     sleep 0.1
